@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/">E-Learning</a>
+        </div>
+        <div class="navbar-menu">
+            {% if user.is_authenticated %}
+                <span class="navbar-item">Welcome, {{ user.get_full_name }}</span>
+                <a href="/logout/" class="navbar-item">Logout</a>
+            {% else %}
+                <a href="/login/" class="navbar-item">Login</a>
+                <a href="/register/" class="navbar-item">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>

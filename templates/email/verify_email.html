@@ -1,0 +1,12 @@
+{% extends "email/base_email.html" %}
+
+{% block email_content %}
+    <h2>Welcome, {{ user.first_name }}!</h2>
+    <p>Thank you for registering on our e-learning platform.</p>
+    <p>To verify your email address, please click the link below:</p>
+    <p>
+        <a href="{{ verification_link }}" class="button">Verify Email</a>
+    </p>
+    <p>Or copy and paste this link in your browser:</p>
+    <p>{{ verification_link }}</p>
+{% endblock %}

@@ -1,1 +1,0 @@
-# Eduhire Django Project
